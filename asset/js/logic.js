@@ -159,7 +159,7 @@ new ScrollMagic.Scene({triggerElement: "#teams"})
                                  .on("leave",(e)=>{
                                     $('.teams-link').find('a').css("color","rgb(0,0,0,0.5)").css("font-size","48px")
                                  })
-                                 .addIndicators({name: "1 (duration: 0)"})
+                                 // .addIndicators({name: "1 (duration: 0)"})
                                  .addTo(controller);
 
 new ScrollMagic.Scene({triggerElement: "#partners"})
@@ -172,7 +172,7 @@ new ScrollMagic.Scene({triggerElement: "#partners"})
                                     $('.teams-link').find('a').css("color","#8c30f5").css("font-size","50px")
                                     $('.partners-link').find('a').css("color","rgb(0,0,0,0.5)").css("font-size","48px")
                                  })
-                                 .addIndicators({name: "1 (duration: 0)"})
+                                 // .addIndicators({name: "1 (duration: 0)"})
                                  .addTo(controller);
 
 $(document).on("click","#dropdown",function(e) {
