@@ -1419,8 +1419,11 @@
 }
 
 .fadeInDown {
+  z-index: 10;
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
+  -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
 }
 
 @-webkit-keyframes fadeInDownBig {
@@ -1891,6 +1894,8 @@
 .fadeOutUp {
   -webkit-animation-name: fadeOutUp;
   animation-name: fadeOutUp;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
 }
 
 @-webkit-keyframes fadeOutUpBig {
@@ -2974,6 +2979,40 @@
 .zoomIn {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes zoomInFade {
+  from{
+    opacity: 0;
+    transform: translate3d(0px, 0px, 0px) scale3d(1.2, 1.2, 1.2) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+  60%{
+    opacity: 1;
+  }
+  100%{
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+}
+
+@keyframes zoomInFade {
+  from{
+    opacity: 0;
+    transform: translate3d(0px, 0px, 0px) scale3d(1.2, 1.2, 1.2) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+  60%{
+    opacity: 1;
+  }
+  100%{
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+}
+
+.zoomInFade {
+  transform-style: preserve-3d;
+  -webkit-animation-name: zoomInFade;
+  animation-name: zoomInFade;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
