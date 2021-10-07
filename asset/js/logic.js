@@ -64,7 +64,6 @@ new ScrollMagic.Scene({triggerElement: "#headlineTrigger"})
                                  .on("leave",(e)=>{
                                     $('.headline-grid-left, .headline-grid-right').addClass('hide')
                                  })
-                                 // // .addIndicators({name: "1 (duration: 0)"})
                                  .addTo(controller);
 
 new ScrollMagic.Scene({triggerElement: "#contributorTrigger"})
@@ -76,7 +75,6 @@ new ScrollMagic.Scene({triggerElement: "#contributorTrigger"})
                                  .on("leave",(e)=>{
                                     $('.title, .collection-logo').addClass('hide')
                                  })
-                                 // .addIndicators({name: "1 (duration: 0)"})
                                  .addTo(controller);
 
 new ScrollMagic.Scene({triggerElement: "#stories1Trigger"})
@@ -88,7 +86,6 @@ new ScrollMagic.Scene({triggerElement: "#stories1Trigger"})
                                  .on("leave",(e)=>{
                                     $('.stories-content').eq(0).addClass('hide')
                                  })
-                                 // .addIndicators({name: "1 (duration: 0)"})
                                  .addTo(controller);
 
 new ScrollMagic.Scene({triggerElement: "#stories2Trigger"})
@@ -100,7 +97,6 @@ new ScrollMagic.Scene({triggerElement: "#stories2Trigger"})
                                  .on("leave",(e)=>{
                                     $('.stories-content').eq(1).addClass('hide')
                                  })
-                                 // .addIndicators({name: "1 (duration: 0)"})
                                  .addTo(controller);
 
 new ScrollMagic.Scene({triggerElement: "#stories3Trigger"})
@@ -112,7 +108,6 @@ new ScrollMagic.Scene({triggerElement: "#stories3Trigger"})
                                  .on("leave",(e)=>{
                                     $('.stories-content').eq(2).addClass('hide')
                                  })
-                                 // .addIndicators({name: "1 (duration: 0)"})
                                  .addTo(controller);
 
 new ScrollMagic.Scene({triggerElement: "#stories4Trigger"})
@@ -124,7 +119,6 @@ new ScrollMagic.Scene({triggerElement: "#stories4Trigger"})
                                  .on("leave",(e)=>{
                                     $('.stories-content').eq(3).addClass('hide')
                                  })
-                                 // .addIndicators({name: "1 (duration: 0)"})
                                  .addTo(controller);
 
 new ScrollMagic.Scene({triggerElement: "#patners1Trigger"})
@@ -136,7 +130,6 @@ new ScrollMagic.Scene({triggerElement: "#patners1Trigger"})
                                  .on("leave",(e)=>{
                                     $('.patners-grid-left').addClass('hide')
                                  })
-                                 // .addIndicators({name: "1 (duration: 0)"})
                                  .addTo(controller);
 
 new ScrollMagic.Scene({triggerElement: "#patners2Trigger"})
@@ -148,33 +141,79 @@ new ScrollMagic.Scene({triggerElement: "#patners2Trigger"})
                                  .on("leave",(e)=>{
                                     $('.patner-list').addClass('hide')
                                  })
-                                 // .addIndicators({name: "1 (duration: 0)"})
                                  .addTo(controller);
 
+new ScrollMagic.Scene({triggerElement: "#descriptionTrigger"})
+                                 .triggerHook(0.9)
+                                 .on("enter",(e)=>{
+                                    $('.description').removeClass('hide').removeClass('zoomInFade')
+                                    $('.description').addClass('zoomInFade')
+                                 })
+                                 .on("leave",(e)=>{
+                                    $('.description').addClass('hide')
+                                 })
+                                 .addTo(controller);
 new ScrollMagic.Scene({triggerElement: "#teams"})
                                  .triggerHook(0.9)
                                  .on("enter",(e)=>{
-                                    $('.teams-link').find('a').css("color","#8c30f5").css("font-size","50px")
+                                    $('.teams').find('h3').removeClass('hide').removeClass('zoomInFade')
+                                    $('.teams').find('h3').addClass('zoomInFade')
                                  })
                                  .on("leave",(e)=>{
-                                    $('.teams-link').find('a').css("color","rgb(0,0,0,0.5)").css("font-size","48px")
+                                    $('.teams').find('h3').addClass('hide')
                                  })
-                                 // .addIndicators({name: "1 (duration: 0)"})
                                  .addTo(controller);
 
 new ScrollMagic.Scene({triggerElement: "#partners"})
                                  .triggerHook(0.9)
                                  .on("enter",(e)=>{
-                                    $('.teams-link').find('a').css("color","rgb(0,0,0,0.5)").css("font-size","48px")
-                                    $('.partners-link').find('a').css("color","#8c30f5").css("font-size","50px")
+                                    $('.partners-container').removeClass('hide').removeClass('zoomInFade')
+                                    $('.partners-container').addClass('zoomInFade')
+                                    $('.partners').find('h3').removeClass('hide').removeClass('zoomInFade')
+                                    $('.partners').find('h3').addClass('zoomInFade')
+                                    $('.partners').find('p').show().removeClass('zoomInFade')
+                                    $('.partners').find('p').addClass('zoomInFade')
                                  })
                                  .on("leave",(e)=>{
-                                    $('.teams-link').find('a').css("color","#8c30f5").css("font-size","50px")
-                                    $('.partners-link').find('a').css("color","rgb(0,0,0,0.5)").css("font-size","48px")
+                                    $('.partners-container').addClass('hide')
+                                    $('.partners').find('h3').addClass('hide')
+                                    $('.partners').find('p').hide()
+                                 })
+                                 .addTo(controller);
+
+new ScrollMagic.Scene({triggerElement: "#shareTrigger"})
+                                 .triggerHook(0.9)
+                                 .on("enter",(e)=>{
+                                    $('.sosmed').removeClass('hide').removeClass('zoomInFade')
+                                    $('.sosmed').addClass('zoomInFade')
+                                 })
+                                 .on("leave",(e)=>{
+                                    $('.sosmed').addClass('hide')
+                                 })
+                                 .addTo(controller);
+
+new ScrollMagic.Scene({triggerElement: "#mainTrigger"})
+                                 .triggerHook(0.9)
+                                 .on("enter",(e)=>{
+                                    $('.artikel-main').find('p').removeClass('hide').removeClass('zoomInFade')
+                                    $('.artikel-main').find('p').addClass('zoomInFade')
+                                 })
+                                 .on("leave",(e)=>{
+                                    $('.artikel-main').find('p').addClass('hide')
+                                 })
+                                 .addTo(controller);
+
+new ScrollMagic.Scene({triggerElement: "#linkTrigger"})
+                                 .triggerHook(0.9)
+                                 .on("enter",(e)=>{
+                                    $('.link-story').removeClass('hide').removeClass('zoomInFade')
+                                    $('.link-story').addClass('zoomInFade')
+                                 })
+                                 .on("leave",(e)=>{
+                                    $('.link-story').addClass('hide')
                                  })
                                  // .addIndicators({name: "1 (duration: 0)"})
                                  .addTo(controller);
-
 $(document).on("click","#dropdown",function(e) {
    if ($(this).data('toggle') == "hide") {
       $('.dropdown-list').removeClass('hide').removeClass('fadeOutUp').addClass('fadeInLeft')
