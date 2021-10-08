@@ -971,6 +971,7 @@ a{text-decoration: none;cursor: pointer;}
 
 @media screen and (max-width:991px){
     .header .title-container .title-content{
+        padding: 20px;
         max-width: 100%;
         margin: auto;
     }
