@@ -751,7 +751,7 @@ a{text-decoration: none;cursor: pointer;}
     margin-top: 50px;
 }
 
-.about .about-right .teams, .about .about-right .partners p{
+.about .about-right .partners p{
     display: none;
 }
 

@@ -156,11 +156,14 @@ new ScrollMagic.Scene({triggerElement: "#descriptionTrigger"})
 new ScrollMagic.Scene({triggerElement: "#teams"})
                                  .triggerHook(0.9)
                                  .on("enter",(e)=>{
+                                    $('.teams').removeClass('hide').removeClass('zoomInFade')
+                                    $('.teams').addClass('zoomInFade')
                                     $('.teams').find('h3').removeClass('hide').removeClass('zoomInFade')
                                     $('.teams').find('h3').addClass('zoomInFade')
                                  })
                                  .on("leave",(e)=>{
                                     $('.teams').find('h3').addClass('hide')
+                                    $('.teams').addClass('zoomInFade')
                                  })
                                  .addTo(controller);
 
