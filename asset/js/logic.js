@@ -121,18 +121,18 @@ new ScrollMagic.Scene({triggerElement: "#stories4Trigger"})
                                  })
                                  .addTo(controller);
 
-new ScrollMagic.Scene({triggerElement: "#patners1Trigger"})
+new ScrollMagic.Scene({triggerElement: "#partners1Trigger"})
                                  .triggerHook(0.9)
                                  .on("enter",(e)=>{
-                                    $('.patners-grid-left').removeClass('hide').removeClass('zoomInFade')
-                                    $('.patners-grid-left').addClass('zoomInFade')
+                                    $('.partners-grid-left').removeClass('hide').removeClass('zoomInFade')
+                                    $('.partners-grid-left').addClass('zoomInFade')
                                  })
                                  .on("leave",(e)=>{
-                                    $('.patners-grid-left').addClass('hide')
+                                    $('.partners-grid-left').addClass('hide')
                                  })
                                  .addTo(controller);
 
-new ScrollMagic.Scene({triggerElement: "#patners2Trigger"})
+new ScrollMagic.Scene({triggerElement: "#partners2Trigger"})
                                  .triggerHook(0.9)
                                  .on("enter",(e)=>{
                                     $('.patner-list').removeClass('hide').removeClass('zoomInFade')
@@ -156,20 +156,21 @@ new ScrollMagic.Scene({triggerElement: "#descriptionTrigger"})
 new ScrollMagic.Scene({triggerElement: "#teams"})
                                  .triggerHook(0.9)
                                  .on("enter",(e)=>{
-                                    $('.teams').removeClass('hide').removeClass('zoomInFade')
-                                    $('.teams').addClass('zoomInFade')
-                                    $('.teams').find('h3').removeClass('hide').removeClass('zoomInFade')
-                                    $('.teams').find('h3').addClass('zoomInFade')
+                                    $('.teams').find('h3').removeClass('hide').removeClass('zoomInFade').end().find('p').removeClass('hide').removeClass('zoomInFade').end()
+                                    $('.teams').find('h3').addClass('zoomInFade').end().find('p').addClass('zoomInFade').end()
+                                    $('.teams-link').find('a').css('color','#000').css('font-size','35px')
                                  })
                                  .on("leave",(e)=>{
-                                    $('.teams').find('h3').addClass('hide')
-                                    $('.teams').addClass('zoomInFade')
+                                    $('.teams').find('h3').addClass('hide').end().find('p').addClass('hide').end()
+                                    $('.teams-link').find('a').css('color','rgb(0,0,0,0.5)').css('font-size','30px')
                                  })
                                  .addTo(controller);
 
 new ScrollMagic.Scene({triggerElement: "#partners"})
                                  .triggerHook(0.9)
                                  .on("enter",(e)=>{
+                                    $('.teams-link').find('a').css('color','rgb(0,0,0,0.5)').css('font-size','30px')
+                                    $('.partners-link').find('a').css('color','#000').css('font-size','35px')
                                     $('.partners-container').removeClass('hide').removeClass('zoomInFade')
                                     $('.partners-container').addClass('zoomInFade')
                                     $('.partners').find('h3').removeClass('hide').removeClass('zoomInFade')
@@ -178,6 +179,8 @@ new ScrollMagic.Scene({triggerElement: "#partners"})
                                     $('.partners').find('p').addClass('zoomInFade')
                                  })
                                  .on("leave",(e)=>{
+                                    $('.teams-link').find('a').css('color','#000').css('font-size','35px')
+                                    $('.partners-link').find('a').css('color','rgb(0,0,0,0.5)').css('font-size','30px')
                                     $('.partners-container').addClass('hide')
                                     $('.partners').find('h3').addClass('hide')
                                     $('.partners').find('p').hide()

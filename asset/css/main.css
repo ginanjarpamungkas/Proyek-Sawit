@@ -6,6 +6,7 @@ h1,h2,h3,h4,h5,h6,p{margin: 0;}
 a{text-decoration: none;cursor: pointer;}
 
 .header{height: 100vh;position: relative;overflow: hidden;background-color: #000;}
+.header.mini{height: 426px;}
 .header .navbar {
     height: 30px;
     position: absolute;
@@ -14,54 +15,85 @@ a{text-decoration: none;cursor: pointer;}
     right: 0;
     background-color: #fff;
     z-index: 11;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 20px;
+    height: 54px;
+    background-color: #fff;
+    transition: all .15s ease-in;
+    z-index: 999;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd
 }
 
-.header .navbar .navbar-container{
-    max-width: 1240px;
-    display: block;
-    margin: auto;
-    padding-right: 1rem;
-    padding-left: 1rem;
+.header .navbar .navbar-menu{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0;
+    margin: 0;
     height: 100%;
 }
-
-.header .navbar .navbar-container .navbar-menu{
-    padding: 0;margin: 0;height: 100%;
-}
-
-.header .navbar .navbar-container .navbar-menu li{
+.header .navbar .navbar-menu li{
     list-style: none;
     display: inline-block;
     height: 100%;
 }
-.header .navbar .navbar-container .navbar-menu li a{
-    display: block;
+.header .navbar .navbar-menu li a{
     height: 100%;
     padding: 5px 8px;
     box-sizing: border-box;
-    color: #000;
-    font-size: 14px;
+    color: #95a6a9;
+    font-size: 16px;
     white-space: nowrap;
+    line-height: 1.2;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
-.header .navbar .navbar-container .navbar-menu li a i{
+.header .navbar .navbar-menu li a i{
     font-size: 10px;
 }
-.header .navbar .navbar-container .navbar-menu li a:hover{
-    background-color: rgba(0,0,0,.3);
+
+.header .navbar .navbar-menu li a:hover, .header .navbar .navbar-menu li a:active, .header .navbar .navbar-menu li a.active{
+    border-bottom: 4px solid #8c30f5;
+    text-shadow: 0.25px 0 0.1px, -0.25px 0 0.1px;
+    color: #1f444d;
 }
 
-.header .navbar .navbar-container .navbar-menu li.dropdown{
+.header .navbar .navbar-menu li.dropdown{
     position: relative;
 }
 
-.header .navbar .navbar-container  .navbar-menu li.dropdown .dropdown-list{
+.header .navbar .navbar-menu li.dropdown .dropdown-list{
     position: absolute;
     background-color: #fff;
     z-index: 10;
     padding: 0;
 }
-.header .navbar .navbar-container  .navbar-menu li.dropdown .dropdown-list li{
+.header .navbar .navbar-menu li.dropdown .dropdown-list li{
     display: list-item;
+}
+
+.header .navbar .navbar-menu li.dropdown .dropdown-list li a:hover{
+    border-bottom: unset;
+    text-shadow: 0.25px 0 0.1px, -0.25px 0 0.1px;
+    color: #1f444d;
 }
 
 .header .background-mask{position: absolute;width: 100%;height: inherit;top: 0;left: 0;background-color: rgba(255,255,255,1);opacity: 0;transform: translate3d(0, 0, 0);z-index: 3;}
@@ -122,6 +154,10 @@ a{text-decoration: none;cursor: pointer;}
     font-size: 80px;
     font-weight: bolder;
     margin-bottom: 1rem;
+}
+
+.header.mini .title-container .title-content h3{
+    font-size: 65px;
 }
 .header .title-container .title-content p{
     color: #fff;
@@ -715,16 +751,15 @@ a{text-decoration: none;cursor: pointer;}
 
 .about .about-left ul li{
     list-style: none;
-    margin: 5rem auto;
 }
 
 .about .about-left ul li a{
     color: rgb(0,0,0,0.5);
     margin-bottom: 20px;
-    font-size: 48px;
-    line-height: 50px;
+    font-size: 30px;
+    line-height: 1.333em;
     font-weight: bold;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
 .about .about-right{
@@ -890,8 +925,8 @@ a{text-decoration: none;cursor: pointer;}
     margin-top: 0;
     max-width: none;
     margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 1.8rem;
+    font-size: 16px;
+    line-height: 1.2rem;
 }
 
 .artikel .artikel-container .artikel-grid .artikel-grid-right .link-story{
@@ -1209,7 +1244,7 @@ a{text-decoration: none;cursor: pointer;}
     }
 
     .navbar {
-        display: none;
+        display: none !important;
     }
     .header .title-container .title-content{
         max-width: 100%;
@@ -1278,8 +1313,13 @@ a{text-decoration: none;cursor: pointer;}
     }
 
     .about .about-left {display: none;}
+    .about .about-right h3{
+        font-size: 30px;
+        line-height: 1.2;
+    }
     .about .about-right .description p{
         text-align: justify;
+        font-size: 16px;
     }
     .about .about-right .partners .partners-container{
         grid-template-columns: 1fr 1fr;
